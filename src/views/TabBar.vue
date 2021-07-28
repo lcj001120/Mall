@@ -1,24 +1,32 @@
 <template>
   <div id="tab-bar">
-    <div class="tab-bar-item" @click="ItemClick" path="/home">
+    <div class="tab-bar-item">
+      <router-link to="home" tag="none">
       <img v-if="!isActive" src="../assets/img/tabbar/home.svg">
       <img v-else src="../assets/img/tabbar/home-active.svg">
       <div :class="{active: isActive}">首页</div>
+    </router-link>
     </div>
-    <div class="tab-bar-item" @click="ItemClick" path="/select">
+    <div class="tab-bar-item">
+    <router-link to="select" tag="none" @click="!isActive">
       <img v-if="!isActive" src="../assets/img/tabbar/select.svg">
       <img v-else src="../assets/img/tabbar/select-active.svg">
       <div :class="{active: isActive}">分类</div>
+    </router-link>
     </div>
-    <div class="tab-bar-item" @click="ItemClick" path="/category">
+    <div class="tab-bar-item">
+      <router-link to="category" tag="none">
       <img v-if="!isActive" src="../assets/img/tabbar/category.svg">
       <img v-else src="../assets/img/tabbar/category-active.svg">
       <div :class="{active: isActive}">购物车</div>
+    </router-link>
     </div>
-    <div class="tab-bar-item" @click="ItemClick" path="/profile">
+    <div class="tab-bar-item">
+      <router-link to="profile" tag="none">
       <img v-if="!isActive" src="../assets/img/tabbar/profile.svg">
       <img v-else src="../assets/img/tabbar/profile-active.svg">
       <div :class="{active: isActive}">个人</div>
+    </router-link>
     </div>
   </div>
 </template>
@@ -64,11 +72,11 @@ export default {
   //     return this.$route.path.indexOf(this.path)
   //   }
   // },
-  methods:{
-    ItemClick(){
-      console.log('click')
-      this.$router.push(this.path)
-    }
-  }
+  // methods:{
+  //   ItemClick(){
+  //     console.log('click')
+  //     this.$router.push(this.path)
+  //   }
+  // }
 }
 </script>
