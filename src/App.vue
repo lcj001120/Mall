@@ -12,10 +12,9 @@ import TabBar from './views/TabBar.vue'
 export default {
   name: 'App',
   components: {
-    TabBar
+    TabBar,
   }
 }
-    
 
 </script>
 

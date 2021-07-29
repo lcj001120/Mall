@@ -79,21 +79,21 @@ export default {
       this.isActive4= false
     },
     goselect(){
-      this.$router.push('/select'),
+      this.$router.replace('/select'),
       this.isActive1= false,
       this.isActive2= true,
       this.isActive3= false,
       this.isActive4= false
     },
     goprofile(){
-      this.$router.push('/profile'),
+      this.$router.replace('/profile'),
       this.isActive1= false,
       this.isActive2= false,
       this.isActive3= false,
       this.isActive4= true
     },
     gocategory(){
-      this.$router.push('/category'),
+      this.$router.replace('/category'),
       this.isActive1= false,
       this.isActive2= false,
       this.isActive3= true,
