@@ -1,32 +1,32 @@
 <template>
   <div id="tab-bar">
-    <div class="tab-bar-item">
-      <router-link to="home" tag="none">
-      <img v-if="!isActive" src="../assets/img/tabbar/home.svg">
+    <div class="tab-bar-item" @click="gohome">
+      <!-- <router-link to="home" replace tag="none"> -->
+      <img v-if="!isActive1" src="../assets/img/tabbar/home.svg">
       <img v-else src="../assets/img/tabbar/home-active.svg">
-      <div :class="{active: isActive}">首页</div>
-    </router-link>
+      <div :class="{active: isActive1}">首页</div>
+    <!-- </router-link> -->
     </div>
-    <div class="tab-bar-item">
-    <router-link to="select" tag="none" @click="!isActive">
-      <img v-if="!isActive" src="../assets/img/tabbar/select.svg">
+    <div class="tab-bar-item" @click="goselect">
+    <!-- <router-link to="select" replace tag="none"> -->
+      <img v-if="!isActive2" src="../assets/img/tabbar/select.svg">
       <img v-else src="../assets/img/tabbar/select-active.svg">
-      <div :class="{active: isActive}">分类</div>
-    </router-link>
+      <div :class="{active: isActive2}">分类</div>
+    <!-- </router-link> -->
     </div>
-    <div class="tab-bar-item">
-      <router-link to="category" tag="none">
-      <img v-if="!isActive" src="../assets/img/tabbar/category.svg">
+    <div class="tab-bar-item" @click="gocategory">
+      <!-- <router-link to="category" replace tag="none" > -->
+      <img v-if="!isActive3" src="../assets/img/tabbar/category.svg">
       <img v-else src="../assets/img/tabbar/category-active.svg">
-      <div :class="{active: isActive}">购物车</div>
-    </router-link>
+      <div :class="{active: isActive3}">购物车</div>
+    <!-- </router-link> -->
     </div>
-    <div class="tab-bar-item">
-      <router-link to="profile" tag="none">
-      <img v-if="!isActive" src="../assets/img/tabbar/profile.svg">
+    <div class="tab-bar-item" @click="goprofile">
+      <!-- <router-link to="profile" replace tag="none"> -->
+      <img v-if="!isActive4" src="../assets/img/tabbar/profile.svg">
       <img v-else src="../assets/img/tabbar/profile-active.svg">
-      <div :class="{active: isActive}">个人</div>
-    </router-link>
+      <div :class="{active: isActive4}">个人</div>
+    <!-- </router-link> -->
     </div>
   </div>
 </template>
@@ -64,12 +64,57 @@ export default {
   },
   data(){
     return{
-      isActive: false
+      isActive1: false,
+      isActive2: false,
+      isActive3: false,
+      isActive4: false
     }
+  },
+  methods:{
+    gohome(){
+      this.$router.replace('/home'),
+      this.isActive1= true,
+      this.isActive2= false,
+      this.isActive3= false,
+      this.isActive4= false
+    },
+    goselect(){
+      this.$router.push('/select'),
+      this.isActive1= false,
+      this.isActive2= true,
+      this.isActive3= false,
+      this.isActive4= false
+    },
+    goprofile(){
+      this.$router.push('/profile'),
+      this.isActive1= false,
+      this.isActive2= false,
+      this.isActive3= false,
+      this.isActive4= true
+    },
+    gocategory(){
+      this.$router.push('/category'),
+      this.isActive1= false,
+      this.isActive2= false,
+      this.isActive3= true,
+      this.isActive4= false
+    },
+    // itemClick1(){
+    //   this.isActive1=!this.isActive1
+    // },
+    // itemClick2(){
+    //   this.isActive2=!this.isActive2
+    // },
+    // itemClick3(){
+    //   this.isActive3=!this.isActive3
+    // },
+    // itemClick4(){
+    //   this.isActive4=!this.isActive4
+    // }
   },
   // compute: {
   //   isActive() {
-  //     return this.$route.path.indexOf(this.path)
+  //     return this.$route.path.indexOf('/home')
   //   }
   // },
   // methods:{
