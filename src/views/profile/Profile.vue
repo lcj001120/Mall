@@ -1,10 +1,21 @@
 <template>
-  <h2>我的</h2>
+  <div>
+    <head-picture></head-picture>
+    <profile-position></profile-position>
+  </div>
 </template>
 
 <script>
+import HeadPicture from '../../components/HeadPicture.vue'
+import ProfilePosition from '../../components/ProfilePosition.vue'
 export default {
-  name: "Profile"
+  components: { HeadPicture, ProfilePosition },
+  name: "Profile",
+  data () {
+      return {
+        
+      }
+    }
 }
 </script>
 
