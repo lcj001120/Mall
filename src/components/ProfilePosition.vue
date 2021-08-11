@@ -1,31 +1,41 @@
 <template>
   <div class="position">
+    <!-- <el-divider></el-divider> -->
+    <div class="el-icon-user-solid"><span class="size">&nbsp;&nbsp;&nbsp;个人信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><div class="el-icon-caret-right"></div></div><br>
     <el-divider></el-divider>
-    <div class="el-icon-s-help"><span>    通用</span><div class="el-icon-caret-right"></div></div><br>
+    <div class="el-icon-s-help"><span class="size">&nbsp;&nbsp;&nbsp;通用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><div class="el-icon-caret-right"></div></div>
     <el-divider></el-divider>
-    <div class="el-icon-user-solid"><span>    个人信息</span><div class="el-icon-caret-right"></div></div><br>
+    <div class="el-icon-s-goods"><span class="size">&nbsp;&nbsp;&nbsp;钱包&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><div class="el-icon-caret-right"></div></div><br>
     <el-divider></el-divider>
-    <div class="el-icon-s-goods"><span>    钱包</span><div class="el-icon-caret-right"></div></div><br>
-    <el-divider></el-divider>
-    <div class="el-icon-s-tools"><span>    设置</span><div class="el-icon-caret-right"></div></div><br>
+    <div class="el-icon-s-tools"><span class="size">&nbsp;&nbsp;&nbsp;设置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><div class="el-icon-caret-right"></div></div><br>
     <el-divider></el-divider>
   </div>
 </template>
 
 <style scoped>
   .position{
-    position:absolute;
-    top:200px;
+    /* display: flex; */
+    padding-top: 60px;
+    margin: 20px;
+    /* border-bottom: 3px solid #eee; */
+    /* top:5000px; */
+    font-size: 20px;
   }
   .el-icon-caret-right{
     /* position:absolute; */
+    /* flex: 1; */
     font-size: 20px;
-    right: 0;
+    /* height: 30px; */
+    margin-right: 0px;
   }
-  .el-icon-s-help .el-icon-user-solid .el-icon-s-goods .el-icon-s-tools{ 
-    /* position:absolute; */
+  .size{
+    /* flex: 1; */
     font-size: 20px;
-    padding: 20px;
+    /* border-bottom: 3px solid #eee; */
   }
 </style>
 
