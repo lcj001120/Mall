@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeadPicture from '../../components/HeadPicture.vue'
-import ProfilePosition from '../../components/ProfilePosition.vue'
+import HeadPicture from './profile_child/HeadPicture.vue'
+import ProfilePosition from './profile_child/ProfilePosition.vue'
 export default {
   components: { HeadPicture, ProfilePosition },
   name: "Profile",

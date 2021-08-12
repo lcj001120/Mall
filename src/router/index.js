@@ -11,6 +11,8 @@ const Profile = () =>
     import ('../views/profile/Profile')
 const Select = () =>
     import ('../views/select/Select')
+const AddPicture = () =>
+    import ('../views/profile/profile_child/AddPicture')
 
 const routes = [{
         path: '',
@@ -31,6 +33,10 @@ const routes = [{
     {
         path: '/select',
         component: Select
+    },
+    {
+        path: '/addpicture',
+        component: AddPicture
     }
 ]
 

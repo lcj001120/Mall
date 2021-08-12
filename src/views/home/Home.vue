@@ -1,17 +1,17 @@
 <template>
   <div id="home">
-    <nav-bar class="vav-bar">购物街</nav-bar>
+    <home-nav-bar class="nav-bar"></home-nav-bar>
     <rotation></rotation>
     <recommend-view :recommends ="recommends"></recommend-view>
     <future-view></future-view>
     <tab-control class="tab-position" :titles="['流行','新款','精选']"></tab-control>
     <!-- <goods-list :goods="goods['pop'].list"></goods-list> -->
     <goods-list :goods = "goods['pop'].list"></goods-list>
+    <loading></loading>
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/NavBar.vue'
 import RecommendView from './home_child/RecommendView.vue'
 import Rotation from './home_child/Rotation.vue'
 import FutureView from './home_child/FutureView.vue'
@@ -19,16 +19,19 @@ import TabControl from '../../components/TabControl.vue'
 
 import { getHomeMultidata , getHomeGoods } from '../../network/home.js'
 import GoodsList from '../../components/GoodsList.vue'
+import HomeNavBar from './home_child/Home-NavBar.vue'
+import Loading from './home_child/Loading.vue'
 
 export default {
   name: "Home",
   components: { 
-    NavBar,
     Rotation,
     RecommendView,
     FutureView,
     TabControl,
     GoodsList,
+    HomeNavBar,
+    Loading,
   },
   data() {
     return{
